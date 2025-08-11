@@ -27,10 +27,10 @@ class PublicForm extends Component
     {
         $validated = $this->validate();
         Attendee::create([
-            'full_name' => $this->full_name,
-            'date_of_birth' => $this->date_of_birth,
-            'mobile_number' => $this->mobile_number,
-            'email' => $this->email
+            'full_name' => $validated['full_name'],
+            'date_of_birth' => $validated['date_of_birth'],
+            'mobile_number' => $validated['mobile_number'],
+            'email' => $validated['email']
         ]);
 
         // session()->flash('success', 'Attendance Recorded');
