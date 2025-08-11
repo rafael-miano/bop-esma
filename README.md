@@ -32,10 +32,10 @@ A web-based attendance tracking system built with **Laravel** and **Livewire**. 
 
 1. **Clone the repository:**
 
-   ```bash
+  ```bash
    git clone https://github.com/rafael-miano/bop-esma.git
    cd bop-esma
-```
+  ```
 
 2. **Install dependencies:**
   
