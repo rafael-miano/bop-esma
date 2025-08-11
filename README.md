@@ -56,9 +56,12 @@ A web-based attendance tracking system built with **Laravel** and **Livewire**. 
   Update your `.env` file:
   
   ```env
-  DB_DATABASE=aia_esma
-  DB_USERNAME=root
-  DB_PASSWORD=
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=bop_esma
+    DB_USERNAME=root
+    DB_PASSWORD=
   ```
   
   Then run migrations and seed data:
