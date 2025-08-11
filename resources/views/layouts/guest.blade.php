@@ -46,7 +46,7 @@
                     {{ $slot }}
                 @else
                     <div
-                        class="w-full sm:max-w-md px-6 py-4 bg-white/30 dark:bg-white/10 backdrop-blur-md ring-1 ring-white/20 shadow-md overflow-hidden sm:rounded-lg">
+                        class="w-full sm:max-w-md py-4 bg-white/30 dark:bg-white/10 backdrop-blur-md ring-1 ring-white/20 shadow-md overflow-hidden sm:rounded-lg">
                         {{ $slot }}
                     </div>
                 @endif

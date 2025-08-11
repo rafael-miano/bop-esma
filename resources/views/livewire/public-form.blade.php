@@ -24,7 +24,7 @@
             <x-text-input id="full_name" wire:model.live="full_name" name="full_name" type="text"
                 class="block w-full px-4 py-2" required />
             @error('full_name')
-                <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                <x-input-error :messages="$message"></x-input-error>
             @enderror
         </div>
 
@@ -37,7 +37,7 @@
             <x-text-input id="date_of_birth" wire:model.live="date_of_birth" name="date_of_birth" type="date"
                 class="block w-full px-4 py-2" required />
             @error('date_of_birth')
-                <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                <x-input-error :messages="$message"></x-input-error>
             @enderror
         </div>
 
@@ -50,7 +50,7 @@
             <x-text-input id="mobile_number" name="mobile_number" type="tel" wire:model.live="mobile_number"
                 pattern="^09\d{9}$" inputmode="numeric" class="block w-full px-4 py-2" required />
             @error('mobile_number')
-                <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                <x-input-error :messages="$message"></x-input-error>
             @enderror
         </div>
 
@@ -63,15 +63,14 @@
             <x-text-input id="email" wire:model.live="email" name="email" type="email"
                 class="block w-full px-4 py-2" required />
             @error('email')
-                <p class="mt-1 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
+                <x-input-error :messages="$message"></x-input-error>
             @enderror
         </div>
 
 
         <!-- Submit Button -->
-        <button type="submit"
-            class="w-full mt-4 py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-md shadow-md transition duration-200">
-            Submit
-        </button>
+            <x-primary-button class="w-full flex items-center justify-center">
+                {{ __('Submit') }}
+            </x-primary-button>
     </form>
 </div>

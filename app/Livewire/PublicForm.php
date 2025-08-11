@@ -4,23 +4,24 @@ namespace App\Livewire;
 
 use App\Models\Attendee;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Locked;
+use Livewire\Attributes\Rule;
 use Livewire\Component;
 
 #[Layout('layouts.guest')]
 class PublicForm extends Component
 {
+    #[Rule('required|string|max:255|regex:/^[A-Za-z\s]+$/')]
     public $full_name;
+
+    #[Rule('required|date')]
     public $date_of_birth;
+
+    #[Rule('required|regex:/^09\d{9}$/')]
     public $mobile_number;
+
+    #[Rule('required|email')]
     public $email;
-
-    protected $rules = [
-        'full_name' => ['required', 'string', 'max:255', 'regex:/^[A-Za-z\s]+$/'],
-        'date_of_birth' => ['required', 'date'],
-        'mobile_number' => ['required', 'regex:/^09\d{9}$/'],
-        'email' => ['required', 'email'],
-    ];
-
 
     public function submit()
     {
